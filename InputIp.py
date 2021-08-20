@@ -1,24 +1,32 @@
 import subprocess
+import os
 
-def ip_batch_file(ip,template):
 
-    with open(r"C:/Users/PTX/Desktop/WIPtools/Actions/template_batch.bat",'w+') as batch :
-        
+def ip_batch_file(ip,dest_port, template, new_file):
+    out_file_path = os.getcwd() + f'{new_file}'
+    print(out_file_path)
+    with open(out_file_path, 'w+') as batch:
         lines = template.readlines()
         print(lines)
         for line in lines:
-            print(line,type(line))
-            line = line.replace("destprn",ip)
+            print(line, type(line))
+            line = line.replace("destprn", ip)
+            line = line.replace('d1prn',f'd{dest_port}prn')
             print(line)
             batch.write(line)
 
-    #subprocess.call([r"C:/Users/PTX/Desktop/WIPtools/Actions/template_batch.bat"])
+    subprocess.call([out_file_path])
 
 
-ip = "192.168.201.225"
-file = open("C:/Users/PTX/Desktop/WIPtools/BatchTemplate/iptest.txt") 
+ip = input('IP:')
+dNprn = input('Destination Port(1-8):')
+if not (1 <= int(dNprn) <= 8):
+    dNprn = 1
 
-ip_batch_file(ip,template=file)
-    
-            
-        
+template = input('batch name:')
+directory = R'C:\Users\pniko\Desktop\BatchTemplates'
+
+file = open(directory + f'\{template}')
+out_filename = input('new batch file name(.bat,.cmd):')
+
+ip_batch_file(ip,dNprn, file, out_filename)

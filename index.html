@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="eng">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--    <link href="navbar-top-fixed.css" rel="stylesheet"/>-->
+
+    <style>
+        body{
+        background:radial-gradient(white, black);
+        }
+
+        #header{
+
+                color:white;
+                borders:solid
+                }
+        .align-right{text-align:right
+
+        }
+
+        #Emulation{
+        background-color:rgba(154, 154, 154, 0.7);
+
+        padding: 5%;
+        box-sizing: border-box;
+
+        }
+
+        .passed-test{
+        background-color:rgba(0, 182, 0, 0.7);
+        padding:2px;
+        }
+
+        .failed-test{
+        background-color:rgba(218, 0, 0, 0.7);
+        padding:4px;
+        }
+
+        #send-job{
+        background-color:purple;
+        color:white;
+        }
+
+        #navbar-title{
+        border-bottom:1px groove
+        }
+
+        .image-border{
+        border: 5px ridge red
+        }
+
+
+
+
+
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/475689626f.js" crossorigin="anonymous"></script>
+
+    <script>
+
+    </script>
+</head>
+<body>
+<nav id="navbar-title" class="navbar navbar-dark  " aria-label="Website Title">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Printronix Auto ID Intern Testing Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="#">Emulation Testing</a></li>
+                        <li><a class="dropdown-item" href="#">SOTI Testing</a></li>
+                        <li><a class="dropdown-item" href="#">Configure Printers</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="header" class="container mb-3 py-5" >
+    <img src="assets/TSC.-Printronix.-16-02-2018.png" class="rounded mx-auto d-block image-border" alt="Ming-Tea">
+
+</div>
+
+<!-- Emulation Section -->
+<div id="Emulation" class="container-md mb-5">
+    <h3 class="EVT-header mb-3">EVT Testing</h3>
+    <div id="printer-register" class="container">
+        <div class="row mb-3">
+
+            <label for="Printername" class="col-md-1">IP Address</label>
+
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="127.0.0.1" id="Printername">
+            </div>
+
+        </div>
+        <div class="row mb-3">
+
+            <label for="PartNumber" class="col-md-1 px-1">Part Number</label>
+
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="P123456" id="PartNumber">
+            </div>
+
+        </div>
+        <div class="row mb-3">
+            <button type="button"  class="col-md-1 offset-md-3 btn btn-outline-secondary">Register</button>
+        </div>
+    </div>
+    <div class="container-md">
+        <div class="row">
+            <div class="table-responsive col-8">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">State</th>
+                        <th scope="col">IP Address</th>
+                        <th scope="col">Part Number</th>
+                        <th scope='col'>Emulation</th>
+                        <th scope="col">RFID</th>
+                        <th scope="col">WIFI</th>
+                        <th scope="col">SOTI</th>
+                        <th scope="col">ODV</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row" class="table-light">1</th>
+                        <td class="table-success">Online</td>
+                        <td class="table-primary">127.0.0.1</td>
+                        <td class="table-primary">P123456</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="table-light">2</th>
+                        <td class="table-success">Online</td>
+                        <td class="table-primary">127.0.0.2</td>
+                        <td class="table-primary">P123456</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-secondary">n/a</td>
+                        <td class="table-secondary" >n/a</td>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="table-light">3</th>
+                        <td class="table-success">Online</td>
+                        <td class="table-primary">127.0.0.3</td>
+                        <td class="table-primary">P123456</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-success">Pass</td>
+                        <td class="table-danger">Fail</td>
+                        <td class="table-success">Pass</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="py-4"></div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">RFID</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">ODV</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">WIFI</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">SOTI</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">RFID</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">ODV</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">WIFI</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">SOTI</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">RFID</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">ODV</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">WIFI</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">SOTI</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-md" id="send-applications">
+    <div class="row">
+        <div class="col-md-3" style="background-color:rgb(0, 38, 71); color: white">
+            <h3 id="inspection-header">Inspection: <span class="ip-monitored" style="color:red;">127.0.0.1</span> </h3>
+            <div id="inspection-data-box">
+                <h5 id="inspection-current-test-header">
+                    <span id="current-test">Emulation</span> In Progress...
+                </h5>
+                <dl id="test-skeleton">
+                    <dd class="test-case">
+                        PGL:
+                        <i class="fas fa-check"></i>
+                    </dd>
+
+
+
+
+                    <dd class="test-case">
+                        ZGL:
+                        <i class="fas fa-check passed-test"></i>
+                    </dd>
+
+                    <dd class="test-case">
+                        IGL:
+                        <i class="fas fa-times failed-test"></i>
+                    </dd>
+
+                    <dd class="test-case">
+                        STGL:
+                        <i class="fas fa-spinner"></i>
+                    </dd>
+
+                    <dd class="test-case">
+                        VGL:
+                        <i class="fas fa-spinner"></i>
+                    </dd>
+
+
+                </dl>
+            </div>
+
+        </div>
+
+        <div id="send-job" class="col-md-3">
+            <h3 class="send-job-header">Send Job</h3>
+            <div class="mb-3">
+                <label for="loadedprinterlist-send-job" class="form-label">Printer</label>
+                <input class="form-control" list="printers-send-job" id="loadedprinterlist-send-job" placeholder="Type to search...">
+                <datalist id="printers-send-job">
+                    <option value="127.0.0.1">
+                    <option value="127.0.0.2">
+                    <option value="127.0.0.3">
+
+                </datalist>
+                <div class="form-check pt-2" style="float:right; clear:both;" >
+                    <input class="form-check-input" type="checkbox" value="" id="send-job-all">
+                    <label class="form-check-label" for="send-job-all">
+                        All Printers
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="job-file" class="form-label">Job File</label>
+                <input class="form-control" type="file" id="job-file">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h3 class="update-firmware-header">Update Firmware</h3>
+            <div class="mb-3">
+                <label for="loadedprinterlist-fw-update" class="form-label">Printer</label>
+                <input class="form-control" list="printers-fw-update" id="loadedprinterlist-fw-update" placeholder="Type to search...">
+                <datalist id="printers-fw-update">
+                    <option value="127.0.0.1">
+                    <option value="127.0.0.2">
+                    <option value="127.0.0.3">
+
+                </datalist>
+
+                <div class="form-check pt-2" style="float:right; clear:both;" >
+                    <input class="form-check-input" type="checkbox" value="" id="fw-upgrade-all">
+                    <label class="form-check-label" for="fw-upgrade-all">
+                        All Printers
+                    </label>
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="firmware-file" class="form-label">Firmware</label>
+                <input class="form-control" type="file" id="firmware-file">
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+      <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="text-muted">&copy; 2021 Company, Inc</span>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+</html>
